@@ -94,9 +94,10 @@ Note that you do not need to have the 'AutoTrading' button activated in your MT4
 8. Save the file, close the editor
 9. Run the Python script
 
-That's it! Just one quick thing though - you'll need to send a 'test' signal to your channel before you let your system start sending out automated signals. 
-Just enter a 'dummy' record into your database directly, or place a quick trade (to which you can close right away). The reason you need to do this is because
-you need to give authorization of the Python code to your Telegram account. After that, you're good to go!
+That's it! Just one quick thing though - the 1st time you launch your Python script, you'll be prompted to enter your phone number. 
+Go ahead and do so (don't forget to include your country code - ie +1 for United States). You'll get a Telegram text/message from Telegram with a one time code after you do this.
+Just enter this code and you'll be all set. The reason you need to do this is because you need to give authorization of the 
+Python code to your Telegram account. After that, you're good to go!
 
 ## Frequently Asked Questions
 Q. How much does this awesome software cost?
