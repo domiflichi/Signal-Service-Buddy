@@ -40,7 +40,8 @@ Specifically, I used the method that can be found on the post that starts with t
 This software package will not work without a SQLite database. You have 2 options here: 1. The easy way, or 2. The not-so-easy-but-not-difficult-way
 #### The easy way (download and use the empty database I provided)
 1. Download the `ssb_trades.db` file from this repository located in the `SQLite` folder
-2. Place the file in the `MQL4\Files\` subfolder of your MT4 installation folder
+2. Place the file in the `MQL4\Files\SQLite\` subfolder of your MT4 installation folder (if you do not have the `SQLite` subfolder, create it, and make sure to use 
+the exact 'casing' as I have shown here - it is case-sensitive!)
 3. Done! See how easy that was?
 
 Or...
@@ -48,7 +49,8 @@ Or...
 1. Download SQLiteStudio from here: https://sqlitestudio.pl/
 2. Unzip the contents to a folder on your computer
 3. Run SQLiteStudio
-4. Create a new database called `ssb_trades.db` in the `MQL4\Files\` subfolder of your MT4 installation folder
+4. Create a new database called `ssb_trades.db` in the `MQL4\Files\SQLite` subfolder of your MT4 installation folder (if you do not have the `SQLite` subfolder, create it, and make sure to use 
+the exact 'casing' as I have shown here - it is case-sensitive!)
 5. In the database, create a new table called `tradestbl`
 6. Create the following columns:
 
