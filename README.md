@@ -117,13 +117,16 @@ Solution - Try providing the full path (currently it's set to the relative path)
 
 Problem - You receive a message in MetaTrader that says 'Database file does not exist!...' when placing the Signal Service Buddy EA
 on your chart
+
 Solution #1 - double check that your placed the `ssb_trades.db` file in the correct location for your MetaTrader installation folder. 
 See the SQLite database file section of the installation instructions above for more info.
+
 Solution #2 - if you still get the same error and you're sure that you have the path/filename correct (including proper casing) and the
 file is there, then try going with option #2 of the SQLite database file (named 'The not-so-easy-but-not-difficult-way (create your own database 
 from scratch)) section of the instllation instructions
 
 Problem - The Signal Service Buddy EA is not picking up your trades and sending them to your Telegram channel
+
 Solution - There could be many reasons, but one thing to check is to make sure that you still have a connection to your broker in MetaTrader. If 
 MetaTrader is not receiving 'ticks'/data from your broker, the EA will not check for new trades. The way the EA works is that it checks 
 for new trades every time a new tick comes in - it runs on 'OnTick()'. Therefore, no ticky, no checky.
