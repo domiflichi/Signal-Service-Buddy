@@ -64,7 +64,7 @@ int OnInit()
     }
     
 
-   string db = "ssb_trades.db";  // The filename of our SQLite database
+   string db = "SQLite\ssb_trades.db";  // The filename of our SQLite database
    
    // Let's check to make sure that the database file exists before we let our code go any further
    if (FileIsExist(db)) // if it does, continue

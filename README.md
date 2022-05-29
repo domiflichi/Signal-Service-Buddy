@@ -79,7 +79,7 @@ Or you could create it from Python. SQLiteStudio just happens to be how I did it
 7. In the window that pops up, under the 'Common' tab, make sure that 'Allow DLL imports' is checked
 8. Click OK
 
-Note that you do not need to have the 'AutoTrading' button activated in your MT4 terminal because remember, this EA does not actually place any trades - it only monitors them
+Note that you do NOT need to have the 'AutoTrading' button activated in your MT4 terminal because remember, this EA does not actually place any trades - it only monitors them
 
 ### The Python script
 1. Download the `signalservicebuddy.py` file located in the `Python` folder in this repository. Place it into a folder of your choosing on your computer's hard drive.
@@ -109,3 +109,22 @@ A. $0
 ## To Dos
 
 * Add support for multiple take profits
+
+## Troubleshooting
+Problem - You receive an error in the Python script (`signalservicebuddy.py`) about not being able to find the file, 
+`signalservicebuddysqlitedbpath.txt`. I didn't have this problem on my own PC, but I had this issue when running it on my VPS (FXVM).
+Solution - Try providing the full path (currently it's set to the relative path)
+
+Problem - You receive a message in MetaTrader that says 'Database file does not exist!...' when placing the Signal Service Buddy EA
+on your chart
+Solution #1 - double check that your placed the `ssb_trades.db` file in the correct location for your MetaTrader installation folder. 
+See the SQLite database file section of the installation instructions above for more info.
+Solution #2 - if you still get the same error and you're sure that you have the path/filename correct (including proper casing) and the
+file is there, then try going with option #2 of the SQLite database file (named 'The not-so-easy-but-not-difficult-way (create your own database 
+from scratch)) section of the instllation instructions
+
+Problem - The Signal Service Buddy EA is not picking up your trades and sending them to your Telegram channel
+Solution - There could be many reasons, but one thing to check is to make sure that you still have a connection to your broker in MetaTrader. If 
+MetaTrader is not receiving 'ticks'/data from your broker, the EA will not check for new trades. The way the EA works is that it checks 
+for new trades every time a new tick comes in - it runs on 'OnTick()'. Therefore, no ticky, no checky.
+
