@@ -113,6 +113,7 @@ A. $0
 ## Troubleshooting
 Problem - You receive an error in the Python script (`signalservicebuddy.py`) about not being able to find the file, 
 `signalservicebuddysqlitedbpath.txt`. I didn't have this problem on my own PC, but I had this issue when running it on my VPS (FXVM).
+
 Solution - Try providing the full path (currently it's set to the relative path)
 
 Problem - You receive a message in MetaTrader that says 'Database file does not exist!...' when placing the Signal Service Buddy EA
